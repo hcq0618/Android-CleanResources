@@ -5,7 +5,7 @@ Android-Clean-Lint
 
 
 #################################################
-环境: win + python2.7
+环境: win + python2.7\n
 Author: changqiang
 Email: hcq0618@163.com
 说明：
