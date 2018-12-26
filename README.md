@@ -51,13 +51,13 @@ python2.7
 
 	You can also add the configuration in gradle
 
-```
-buildTypes {
-    release {
-        minifyEnabled true
-        shrinkResources true
-    }
-```
+    ```
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+        }
+    ```
 
 
 ## License
