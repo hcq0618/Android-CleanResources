@@ -59,6 +59,7 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
             minifyEnabled true
             shrinkResources true
         }
+    }
 	```
 
 ## License
