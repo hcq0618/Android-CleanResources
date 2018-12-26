@@ -45,6 +45,7 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
 - 也可以选择在gradle中配置
 
 	You can also add the configuration in gradle
+
 	```
 android {
         ...
@@ -56,6 +57,7 @@ android {
             }
    }
 ```
+
 
 ## License
 
