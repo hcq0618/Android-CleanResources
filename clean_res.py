@@ -25,7 +25,7 @@ print cmd
 process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stdin=subprocess.PIPE)
 process.wait()
 
-# 获取过滤的关键字
+# 获取需要保留的文件目录
 keepFilePathKeys = configReader.get_keep_file_path_keys()
 
 # 开始循环删除无用资源文件
