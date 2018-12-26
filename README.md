@@ -17,8 +17,10 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
 **clean_res.py**
 
 1. 使用前先clean工程，确保工程bin下重新生成dex，以便lint进行分析。
+
 	At first clean your project
 1. 修改配置文件clean_lint_config.ini中的路径即可使用，其中：
+
 	 Modify the content of 'clean_lint_config.ini' file，including:
 
     **projectPath**：项目路径
@@ -52,7 +54,6 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
 
 	You can also add the configuration in gradle
 	```
-        ...
         buildTypes {
             release {
             	minifyEnabled true
