@@ -20,13 +20,13 @@ projectPath = configReader.get_project_path()
 moduleName = configReader.get_module_name()
 
 
-# # 执行lint命令
-# goToProjectCmd = 'cd %s' % projectPath
-# lintCmd = './gradlew :%s:lintDebug' % moduleName
-# cmd = goToProjectCmd + ' && ' + lintCmd
-# print cmd
-# process = subprocess.Popen(cmd, shell=True)
-# process.wait()
+# 执行lint命令
+goToProjectCmd = 'cd %s' % projectPath
+lintCmd = './gradlew :%s:lintDebug' % moduleName
+cmd = goToProjectCmd + ' && ' + lintCmd
+print cmd
+process = subprocess.Popen(cmd, shell=True)
+process.wait()
 
 
 class IssueHandler(ContentHandler):
