@@ -33,8 +33,8 @@ class ConfigReader:
         lint_path = self.config.get(self.pathSectionKey, 'lintPath')
         return self.encode_path(lint_path)
 
-    def get_filter_keys(self):
-        return self.config.get(self.paramsSectionKey, 'filterKeys').split('|')
+    def get_keep_file_path_keys(self):
+        return self.config.get(self.paramsSectionKey, 'keepFilePathKeys').split('|')
 
     def get_main_module_name(self):
         return self.config.get(self.paramsSectionKey, 'mainModuleName')
@@ -51,11 +51,11 @@ class Utils:
         file_size = file_size / float(1024)
         return round(file_size, 2)
 
-    # 是否为过滤的文件
+    # 是否为需要忽略的目录
     @staticmethod
-    def is_filter_file(filter_keys, sub_path):
-        for key in filter_keys:
-            if key in sub_path:
+    def is_keep_file_path(keep_file_path_keys, file_path):
+        for key in keep_file_path_keys:
+            if key in file_path:
                 # print key
                 return True
         return False

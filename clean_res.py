@@ -26,7 +26,7 @@ process = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE, stdin=subpro
 process.wait()
 
 # 获取过滤的关键字
-filterKeys = configReader.get_filter_keys()
+keepFilePathKeys = configReader.get_keep_file_path_keys()
 
 # 开始循环删除无用资源文件
 pattern = "appears to be unused"
@@ -45,7 +45,7 @@ for line in process.stdout:
         unused_file_count += 1
         unused_file_total_size += Utils.get_file_size(filename)
 
-        if Utils.is_filter_file(filterKeys, subPath):
+        if Utils.is_keep_file_path(keepFilePathKeys, subPath):
             continue
 
         if Utils.delete_file(filename):
