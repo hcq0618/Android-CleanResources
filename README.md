@@ -10,7 +10,7 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
 
 - - -
 
-环境: python2.7
+python2.7
 
 - - -
 
@@ -19,13 +19,19 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
 1. 使用前先clean工程，确保工程bin下重新生成dex，以便lint进行分析。
 	At first clean your project
 1. 修改配置文件clean_lint_config.ini中的路径即可使用，其中：
+
 	Modify the content of 'clean_lint_config.ini' file，including:
 **projectPath**：项目路径
+
 **lintPath**：Android SDK目录中lint命令行的路径，一般为Android SDK目录下tools目录中
+
 **filterKeys**：过滤的关键字集合，默认过滤Android项目中values和layout目录下的资源，
 支持自定义添加，格式为：关键字1|关键字2，即以‘|’分割
+
 **projectPath**：your project directory path
+
 **lintPath**：the lint comand file path in Android SDK directory，and generally, it is in the tools directory under the Android SDK directory
+
 **filterKeys**: By default, the resources under values and layout directories in the Android project are filtered,Support custom add, and the format is: keyword 1| keyword 2 is divided by '|'
 
 - - -
