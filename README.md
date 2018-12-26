@@ -34,12 +34,16 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
 
 说明：
 - 可利用cxFreeze、py2exe、pyInstaller等工具将py文件打包转成exe执行文件
+
 	You can use cxFreeze, py2exe, pyInstaller and other tools to package py files and turn them into exe executables
 - 如果清除资源后，工程缺少文件而报错（极少情况），尝试通过svn/git恢复该文件即可
+
 	If the project reports an error (in rare cases) due to a lack of files after clearing resources, try to restore the file through SVN /Git
 - 也可以选择在Android Studio中使用 Menu > Refactor > Remove Unused Resources
+
 	Alternatively, you can also use Menu > Refactor > Remove Unused Resources in Android Studio
 - 也可以选择在gradle中配置
+
 	You can also add the configuration in gradle
 	```
 android {
