@@ -36,8 +36,8 @@ class ConfigReader:
     def get_keep_file_path_keys(self):
         return self.config.get(self.paramsSectionKey, 'keepFilePathKeys').split('|')
 
-    def get_main_module_name(self):
-        return self.config.get(self.paramsSectionKey, 'mainModuleName')
+    def get_module_name(self):
+        return self.config.get(self.paramsSectionKey, 'moduleName')
 
 
 class Utils:
@@ -47,15 +47,16 @@ class Utils:
     # 获取文件的大小,结果保留两位小数，单位为KB
     @staticmethod
     def get_file_size(file_path):
-        file_size = os.path.getsize(file_path)
-        file_size = file_size / float(1024)
-        return round(file_size, 2)
+        if os.path.exists(file_path):
+            file_size = os.path.getsize(file_path)
+            file_size = file_size / float(1024)
+            return round(file_size, 2)
 
     # 是否为需要忽略的目录
     @staticmethod
     def is_keep_file_path(keep_file_path_keys, file_path):
         for key in keep_file_path_keys:
-            if key in file_path:
+            if os.sep + key in file_path:
                 # print key
                 return True
         return False
@@ -68,11 +69,11 @@ class Utils:
               (str(delete_file_count), str(delete_file_total_size))
 
     @staticmethod
-    def delete_file(filename):
-        if os.path.exists(filename):
-            os.remove(filename)
-            print filename + " was deleted!"
+    def delete_file(file_path):
+        if os.path.exists(file_path):
+            os.remove(file_path)
+            print file_path + " was deleted!"
             return True
         else:
-            print filename + " is not exists"
+            print file_path + " is not exists"
             return False

@@ -39,17 +39,19 @@ for line in process.stdout:
         subPath = line[0:pos]
         # print subPath
 
-        filename = projectPath + os.sep + subPath
-        # print filename
+        filePath = projectPath + os.sep + subPath
+        # print filePath
 
-        unused_file_count += 1
-        unused_file_total_size += Utils.get_file_size(filename)
+        fileSize = Utils.get_file_size(filePath)
+        if fileSize > 0:
+            unused_file_count += 1
+            unused_file_total_size += fileSize
 
-        if Utils.is_keep_file_path(keepFilePathKeys, subPath):
+        if Utils.is_keep_file_path(keepFilePathKeys, filePath):
             continue
 
-        if Utils.delete_file(filename):
+        if Utils.delete_file(filePath):
             delete_file_count += 1
-            delete_file_total_size += Utils.get_file_size(filename)
+            delete_file_total_size += fileSize
 
 Utils.print_result(unused_file_count, unused_file_total_size, delete_file_count, delete_file_total_size)
