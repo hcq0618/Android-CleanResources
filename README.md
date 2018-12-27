@@ -9,8 +9,11 @@
 所以需要一个脚本工具来批量删除lint分析的无用资源
 
 As the project gets bigger, there may be more and more unused resources,
+
 If each is manually deleted, not only might it be wrong to delete, but also to find and delete files is very troublesome,
+
 You can also use Menu > Refactor > Remove Unused Resources in Android Studio,
+
 Therefore, a script tool is needed to batch remove lint analysis of unused resources
 
 - - -
