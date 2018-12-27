@@ -63,7 +63,7 @@ class Utils:
 
     @staticmethod
     def print_result(unused_file_count, unused_file_total_size, delete_file_count, delete_file_total_size):
-        print "Total unused file resources count is %s and total size is %s kb" % \
+        print "Total unused resources count is %s and total size is %s kb" % \
               (str(unused_file_count), str(unused_file_total_size))
         print "Total deleted file resources count is %s and total size is %s kb" % \
               (str(delete_file_count), str(delete_file_total_size))

@@ -19,7 +19,6 @@ configReader = ConfigReader()
 projectPath = configReader.get_project_path()
 moduleName = configReader.get_module_name()
 
-
 # 执行lint命令
 goToProjectCmd = 'cd %s' % projectPath
 lintCmd = './gradlew :%s:lintDebug' % moduleName
@@ -49,9 +48,7 @@ class IssueHandler(ContentHandler):
             self.isUnusedRes = False
         elif tag == 'location':
             if self.isUnusedRes:
-                if 'line' in attributes or 'column' in attributes:
-                    return
-                elif 'file' in attributes:
+                if 'file' in attributes:
                     file_path = attributes['file']
                     print file_path
                     self.unusedResList.append(file_path)

@@ -27,16 +27,24 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
 
     **lintPath**：Android SDK目录中lint命令行的路径，一般为Android SDK目录下tools目录中
 
-    **keepFilePathKeys**：需要保留不删除的文件目录集合，默认保留Android项目中values和layout目录下的资源，
+    **keepFilePathKeys**：需要保留不删除的文件目录集合，默认保留Android项目中values目录下的资源，
     支持自定义添加，格式为：关键字1|关键字2，即以‘|’分割
 
     **projectPath**：your project directory path
 
-    **lintPath**：the lint comand file path in Android SDK directory，and generally, it is in the tools directory under the Android SDK directory
+    **lintPath**：the lint command file path in Android SDK directory，and generally, it is in the tools directory under the Android SDK directory
 
     **keepFilePathKeys**: You want to keep an undeleted collection of file directories.
     By default, the resources under values and layout directories in the Android project are keeped.
     Support custom add, and the format is: keyword 1| keyword 2 is divided by '|'
+
+**clean_res_for_gradle.py**
+1. 修改配置文件clean_lint_config.ini中的路径即可使用，其他同上，另外还包括：
+
+	Modify the content of 'clean_lint_config.ini' file，other same as above, also include additionally
+
+	**moduleName**：主模块名称，默认为app
+    **moduleName**：Main module name, default is 'app'
 
 - - -
 
