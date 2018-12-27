@@ -41,9 +41,10 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
 **clean_res_for_gradle.py**
 1. 修改配置文件clean_lint_config.ini中的路径即可使用，其他同上，另外还包括：
 
-	Modify the content of 'clean_lint_config.ini' file，other same as above, also include additionally
+	Modify the content of 'clean_lint_config.ini' file，other same as above, also include additionally:
 
 	**moduleName**：主模块名称，默认为app
+
     **moduleName**：Main module name, default is 'app'
 
 - - -
