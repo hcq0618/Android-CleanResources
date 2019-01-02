@@ -6,12 +6,6 @@ import subprocess
 
 from clean_res_helper import ConfigReader, Utils
 
-unused_file_count = 0
-unused_file_total_size = 0
-
-delete_file_count = 0
-delete_file_total_size = 0
-
 # 获取配置文件参数
 configReader = ConfigReader()
 projectPath = configReader.get_project_path()
@@ -28,6 +22,12 @@ process.wait()
 # 获取需要保留的文件目录
 keepFilePathKeys = configReader.get_keep_file_path_keys()
 
+unused_files = []
+unused_file_total_size = 0
+
+delete_files = []
+delete_file_total_size = 0
+
 # 开始循环删除无用资源文件
 pattern = "appears to be unused"
 for line in process.stdout:
@@ -43,15 +43,15 @@ for line in process.stdout:
         # print filePath
 
         fileSize = Utils.get_file_size(filePath)
-        if fileSize > 0:
-            unused_file_count += 1
+        if fileSize > 0 and filePath not in unused_files:
+            unused_files.append(filePath)
             unused_file_total_size += fileSize
 
         if Utils.is_keep_file_path(keepFilePathKeys, filePath):
             continue
 
-        if Utils.delete_file(filePath):
-            delete_file_count += 1
+        if Utils.delete_file(filePath) and filePath not in delete_files:
+            delete_files.append(filePath)
             delete_file_total_size += fileSize
 
-Utils.print_result(unused_file_count, unused_file_total_size, delete_file_count, delete_file_total_size)
+Utils.print_result(len(unused_files), unused_file_total_size, len(delete_files), delete_file_total_size)
