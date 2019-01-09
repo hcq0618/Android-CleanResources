@@ -23,12 +23,16 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
 **keepFilePathKeys**：需要保留不删除的文件目录集合，默认保留Android项目中values目录下的资源，支持自定义添加
 
 
+
 1. At first clean your project
 1. Modify the content of 'clean_lint_config.json' file，including:
-**projectPath**：your project directory path
-**lintPath**：the lint comand file path in Android SDK directory，and generally, it is in the tools directory under the Android SDK directory
-**keepFilePathKeys**: You want to keep an undeleted collection of file directories.
-By default, the resources under values directory in the Android project are keeped.Support custom add
+
+    **projectPath**：your project directory path
+
+    **lintPath**：the lint comand file path in Android SDK directory，and generally, it is in the tools directory under the Android SDK directory
+
+    **keepFilePathKeys**: You want to keep an undeleted collection of file directories.
+    By default, the resources under values directory in the Android project are keeped.Support custom add
 
 - - -
 
