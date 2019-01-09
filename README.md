@@ -30,6 +30,8 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
 **keepFilePathKeys**: You want to keep an undeleted collection of file directories.
 By default, the resources under values directory in the Android project are keeped.Support custom add
 
+- - -
+
 **clean_res_for_gradle.py**
 
 修改配置文件clean_lint_config.json中的路径即可使用，其他同上，另外还包括：
@@ -39,6 +41,8 @@ Modify the content of 'clean_lint_config.json' file，other same as above, also 
 **moduleName**：主模块名称，默认为app
 
 **moduleName**：Main module name, default is 'app'
+
+- - -
 
 **clean_res_for_matrix.py**
 
@@ -62,16 +66,16 @@ Modify the content of 'clean_lint_config.json' file，other same as above, also 
 - 也可以选择在gradle中配置
 	You can also add the configuration in gradle
 	```
-android {
-        ...
+    android {
+            ...
 
-        buildTypes {
-            release {
-            	minifyEnabled true
-                shrinkResources true
-            }
-   }
-```
+            buildTypes {
+                release {
+                    minifyEnabled true
+                    shrinkResources true
+                }
+       }
+    ```
 
 ## License
 
