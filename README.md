@@ -2,11 +2,11 @@
 
 当项目越来越大时，无用资源可能会越来越多
 如果每个都是手动删除，不但可能删错，查找和删除文件也很麻烦，
-所以需要一个脚本工具来批量删除lint分析的无用资源
+所以需要一个脚本工具来批量删除用工具（Lint、Matrix等）分析出的无用资源
 
 As the project gets bigger, there may be more and more unused resources,
 If each is manually deleted, not only might it be wrong to delete, but also to find and delete files is very troublesome,
-Therefore, a script tool is needed to batch remove lint analysis of unused resources
+Therefore, a script tool is needed to batch remove some tools(Lint or Matrix,etc.) analysis of unused resources
 
 - - -
 
