@@ -1,0 +1,18 @@
+{
+  "paths": {
+    "projectPath": "/Users/huangchangqiang/Downloads/a",
+    "libPaths": [
+      "/Users/huangchangqiang/Downloads/b",
+      "/Users/huangchangqiang/Downloads/c",
+      "/Users/huangchangqiang/Downloads/r"
+    ],
+    "lintPath": "~/Library/Android/sdk/tools/bin/lint",
+    "matrixJsonResultPath": "/Users/huangchangqiang/Downloads/app-release-unsigned.json"
+  },
+  "params": {
+    "keepFilePathKeys": [
+      "values"
+    ],
+    "moduleName": "app"
+  }
+}
