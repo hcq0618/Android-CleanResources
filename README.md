@@ -48,22 +48,34 @@ Modify the content of 'clean_lint_config.json' file，other same as above, also 
 
 针对[Matrix](https://github.com/Tencent/matrix "Matrix")分析结果进行无用资源的批量清理
 
+For [Matrix](https://github.com/Tencent/matrix "Matrix") analysis results are unused resources batch cleaning
+
 修改配置文件clean_lint_config.json中的路径即可使用，其他同上，另外还包括：
+
+Modify the content of 'clean_lint_config.json' file，other same as above, also include additionally:
 
 **matrixJsonResultPath**：matrix分析结果，json为后缀的文件
 
+**matrixJsonResultPath**：Matrix analysis results, json for the suffix of the file
+
 **libPaths**：依赖库的路径
+
+**libPaths**：the paths of dependency library
 
 - - -
 
 说明：
 - 可利用cxFreeze、py2exe、pyInstaller等工具将py文件打包转成exe执行文件
+
 	You can use cxFreeze, py2exe, pyInstaller and other tools to package py files and turn them into exe executables
 - 如果清除资源后，工程缺少文件而报错（极少情况），尝试通过svn/git恢复该文件即可
+
 	If the project reports an error (in rare cases) due to a lack of files after clearing resources, try to restore the file through SVN /Git
 - 也可以选择在Android Studio中使用 Menu > Refactor > Remove Unused Resources
+
 	Alternatively, you can also use Menu > Refactor > Remove Unused Resources in Android Studio
 - 也可以选择在gradle中配置
+
 	You can also add the configuration in gradle
 	```
     android {
