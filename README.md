@@ -16,23 +16,21 @@ Therefore, a script tool is needed to batch remove lint analysis of unused resou
 
 **clean_res.py**
 
-1. 使用前先clean工程，确保工程bin下重新生成dex，以便lint进行分析。
-1. 修改配置文件clean_lint_config.json中的路径即可使用，其中：
-**projectPath**：项目路径
-**lintPath**：Android SDK目录中lint命令行的路径，一般为Android SDK目录下tools目录中
-**keepFilePathKeys**：需要保留不删除的文件目录集合，默认保留Android项目中values目录下的资源，支持自定义添加
+- 使用前先clean工程，确保工程bin下重新生成dex，以便lint进行分析。
+- 修改配置文件clean_lint_config.json中的路径即可使用，其中：
+     **projectPath**：项目路径
+     **lintPath**：Android SDK目录中lint命令行的路径，一般为Android SDK目录下tools目录中
+     **keepFilePathKeys**：需要保留不删除的文件目录集合，默认保留Android项目中values目录下的资源，支持自定义添加
 
+- At first clean your project
+- Modify the content of 'clean_lint_config.json' file，including:
 
+     **projectPath**：your project directory path
 
-1. At first clean your project
-1. Modify the content of 'clean_lint_config.json' file，including:
+     **lintPath**：the lint comand file path in Android SDK directory，and generally, it is in the tools directory under the Android SDK directory
 
-    **projectPath**：your project directory path
-
-    **lintPath**：the lint comand file path in Android SDK directory，and generally, it is in the tools directory under the Android SDK directory
-
-    **keepFilePathKeys**: You want to keep an undeleted collection of file directories.
-    By default, the resources under values directory in the Android project are keeped.Support custom add
+     **keepFilePathKeys**: You want to keep an undeleted collection of file directories.
+     By default, the resources under values directory in the Android project are keeped.Support custom add
 
 - - -
 
