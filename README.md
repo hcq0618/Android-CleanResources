@@ -82,7 +82,7 @@ Modify the content of 'clean_lint_config.json' file，other same as above, also 
 - 也可以选择在gradle中配置
 
 	You can also add the configuration in gradle
-	```
+	```groovy
     android {
             ...
 
